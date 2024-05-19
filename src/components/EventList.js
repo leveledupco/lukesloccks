@@ -5,7 +5,7 @@ const EventList = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    axios.get('/upcoming-events')
+    axios.get('https://YOUR_FIREBASE_FUNCTION_URL/upcoming-events')
       .then(response => setEvents(response.data))
       .catch(error => console.error('Error fetching events:', error));
   }, []);

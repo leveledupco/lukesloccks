@@ -5,7 +5,7 @@ const BestBets = () => {
   const [bets, setBets] = useState([]);
 
   useEffect(() => {
-    axios.get('/best-bets')
+    axios.get('https://YOUR_FIREBASE_FUNCTION_URL/best-bets')
       .then(response => setBets(response.data))
       .catch(error => console.error('Error fetching best bets:', error));
   }, []);
