@@ -5,7 +5,7 @@ const BestBets = () => {
   const [bets, setBets] = useState([]);
 
   useEffect(() => {
-    axios.get('https://helloworld-dunh7efydq-uc.a.run.app/best-bets')
+    axios.get('https://lukes-locks--lukeslocks-e329b.us-central1.hosted.app/best-bets')
       .then(response => setBets(response.data))
       .catch(error => console.error('Error fetching best bets:', error));
   }, []);

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const BestBets = () => {
+const EventList = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    axios.get('https://helloworld-dunh7efydq-uc.a.run.app/upcoming-events')
+    axios.get('https://lukes-locks--lukeslocks-e329b.us-central1.hosted.app/upcoming-events')
       .then(response => setEvents(response.data))
       .catch(error => console.error('Error fetching events:', error));
   }, []);
@@ -22,4 +22,4 @@ const BestBets = () => {
   );
 }
 
-export default BestBets;
+export default EventList;
